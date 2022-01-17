@@ -1,0 +1,61 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+.Container{
+    background-image: url(../SRC/carbg.jpg);
+    background-position: center;
+    background-size: cover;
+    height:100vh;   
+}
+
+.Container:after{
+    position: absolute;
+    content: '';
+    top : 0;
+    left: 0;
+    height : 100%;
+    width : 100%;
+    background:rgba(0,0,0,0.7);
+
+}
+
+.Box{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*text-align: center;*/
+    z-index: 999;
+    width: 1000px;
+    padding:60px 32px ;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -px 4px28px 0px rgba(0, 0, 0, 0.75); 
+}
+
+.table-box{
+    margin: 50px auto;
+}
+
+.table-row{
+    display:auto;
+    width:80%;
+    margin: 10px auto;
+    background: transparent;
+    padding: 12px 0;
+    color: white;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3) ;
+}
+
+.table-cell{
+    display : table-cell;
+    width : 10%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+
+
