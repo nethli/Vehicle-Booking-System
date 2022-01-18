@@ -48,5 +48,15 @@ function custValidate(){
         return false;
     }
 
+    var emailID = document.CustForm.email.value;
+    x = emailID.indexOf("@");
+    y = emailID.lastIndexOf(".");
+    
+    if(x<1 || (y - x >2)){
+    alert("Please enter a valid Email.");
+    document.CustForm.email.focus();
+    return false;
+} 
+
 return true;
 }

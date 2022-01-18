@@ -1,6 +1,7 @@
 <?php
 
 include "../PHP/server.php" ;
+include "sqlinsert.php";
 
 /*$sql_create = "CREATE TABLE users(
                     userID INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,7 +54,7 @@ else{
         <div class = "register">
             <h2> Driver Registration </h2>
             
-            <form id = "register" method = "POST" name = "DriverForm" action = 'sqlinsert.php'  onsubmit="return(DriverValidate());">
+            <form id = "register" method = "POST" name = "DriverForm"  onsubmit="return(DriverValidate());">
 
                 <label>First Name</label>
                 <br>
