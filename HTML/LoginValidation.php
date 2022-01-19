@@ -1,49 +1,40 @@
 <?php
 
-include '../PHP/server.php' ;
+include '../PHP/server.php';
+
+//Alert Boxes
+
+/*function alertMsg($msg){
+        echo '<script type = "text/javascript"> 
+                alert(" '.$msg.' ");
+             </script>';
+}*/
 
 if(isset($_POST['submit'])){
-        $email      = $_POST['username'];
-        $password   = $_POST['password'];
+        $checkusername = $_POST['username'];
+        $checkpassword = $_POST['password'];
 
-        //Email Retrieval
-        $sql_select = ("SELECT * From users");
-                            
-        $result     = mysqli_query($con,$sql_select);
-                            
-        if(mysqli_num_rows($result)>0){
-                while($row = mysqli_fetch_assoc($result)) {
-                        $checkEmail = $row['Email'];
-                        if ($email==$checkEmail) {
-                                echo "You can forward";
-                        }
-                        
-                        //echo $row['Email']."<br>";
-                        else {
-                                header('homepage.html');
-                        }
-                }
+        //Query for retrieving username and password
+
+        $sql = "SELECT Email,Password FROM users WHERE FirstName ='$checkusername' AND Password='$checkpassword'";
+        
+        $result = mysqli_query($con,$sql);
+
+        if(mysqli_num_rows($result)){
+                /*alertMsg("Login Success!!");*/
+                header('location:mainPage.php');                
+                
         }else{
-                //echo "Error !";
+               /*alertMsg("Invalid Login!! Please try again.");*/
+               echo "Try again!";
         }
-                                                       
-}                 
+
+       
+       
+       
+       
+       
+
+}
+
 ?>
-                
-                
-
-                
-                                
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-
-

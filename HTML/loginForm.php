@@ -1,6 +1,6 @@
 <?php
     include "../PHP/server.php" ;  
-    require 'LoginValidation.php';                                      
+    require 'LoginValidation.php';        
 ?>
 
 
@@ -23,12 +23,13 @@
 <body>
     <div class = "loginContainer">
         <div class = "content">
+
             <h1>Login Form</h1>
     
-            <form method="POST" name = "login" action = "">
+            <form method="POST" name = "login" >
             <div class = "field">
                 <span class = "fas fa-user-alt"></span>
-                <input type = "text" name = "username" placeholder = "username" required  >
+                <input type = "text" name = "username" placeholder = "username" required id = "myname">
             </div>
 
             <div class = "field space">
@@ -37,7 +38,7 @@
             </div>
 
             <div class = "field space">
-                <input type = "submit" value = "Login" name ="submit">
+                <input type = "submit" value = "Login" name ="submit" onclick="getUser()">
                 
             </div>
     
