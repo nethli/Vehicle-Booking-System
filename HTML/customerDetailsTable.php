@@ -7,6 +7,10 @@
     <title>Customer Details</title>
 <!-- this is for test -->
 
+<div>
+    
+</div>
+
 </head>
 <body>
     
