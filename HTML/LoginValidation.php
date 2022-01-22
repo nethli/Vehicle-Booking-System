@@ -1,14 +1,15 @@
 <?php
 
+session_start();
 include '../PHP/server.php';
 
 //Alert Boxes
 
-/*function alertMsg($msg){
+function alertMsg($msg){
         echo '<script type = "text/javascript"> 
                 alert(" '.$msg.' ");
              </script>';
-}*/
+}
 
 if(isset($_POST['submit'])){
         $checkusername = $_POST['username'];
@@ -21,20 +22,14 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($con,$sql);
 
         if(mysqli_num_rows($result)){
-                /*alertMsg("Login Success!!");*/
-                header('location:mainPage.php');                
+                $_SESSION['FirstName']=$checkusername;
+                header('location:mainPage.php');  
+                die;              
                 
         }else{
-               /*alertMsg("Invalid Login!! Please try again.");*/
-               echo "Try again!";
+               alertMsg("Invalid Login!! Please try again.");
+               header('location:loginForm.php');  
         }
-
-       
-       
-       
-       
-       
-
 }
 
 ?>

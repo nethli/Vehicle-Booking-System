@@ -1,8 +1,7 @@
 <?php
     include "../PHP/server.php" ;  
-    require 'LoginValidation.php';        
+    require 'LoginValidation.php'; 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +25,7 @@
 
             <h1>Login Form</h1>
     
-            <form method="POST" name = "login" >
+            <form method="POST" name = "login">
             <div class = "field">
                 <span class = "fas fa-user-alt"></span>
                 <input type = "text" name = "username" placeholder = "username" required id = "myname">
@@ -38,17 +37,13 @@
             </div>
 
             <div class = "field space">
-                <input type = "submit" value = "Login" name ="submit" onclick="getUser()">
+                <input type = "submit" value = "Login" name ="submit">
                 
             </div>
     
         <div class ="acc"> Don't have account? <a href = "homepage.html">Signup Now</a></div>
         </div>
-    </div>
-
-    
-    
-    
+    </div>  
 
 </body>
 </html>
