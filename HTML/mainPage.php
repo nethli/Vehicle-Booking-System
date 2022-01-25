@@ -39,8 +39,9 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-          <span class="fas fa-user-alt"><p align = "right"><font color="white"><?php echo ($_SESSION['FirstName']);?></font></p></span>
+
+<!--Displaying the username-->
+          <span class="fas fa-user-alt"><p align = "right"><font color="white"><?php echo($_SESSION['FirstName']);?></font></p></span>
         </div>
     </nav>
 
@@ -64,7 +65,8 @@
             <li><a href = "loginForm.php">Logout</a></li>
             <li><a href = "loginForm.php">News</a></li>
             <li><a href = "loginForm.php">Sign up</a></li>        
-    </ul>    
+    </ul> 
+       
 <!--Define Footer-->
    <footer>
             <p>&copy; 2022 Baymax Transportaion Service</p>
