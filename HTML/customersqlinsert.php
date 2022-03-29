@@ -1,7 +1,7 @@
 <?php
     include '../PHP/server.php';
 
-    //Checkin that the all form values are entered and then insertting those values into the databases.
+    //Checking that the all form values are entered and then inserting those values into the databases.
 
     if(isset($_POST['submit'])){
         $Fname      = $_POST['firstName'];

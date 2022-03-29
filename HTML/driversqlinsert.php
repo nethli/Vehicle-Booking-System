@@ -15,7 +15,7 @@ include '../PHP/server.php';
         
         do{
             $id=uniqid();
-            $sql_insert1   = "INSERT INTO users(userID,FirstName,LastName,Gender,Email,Password,Address ) VALUES ('$id','$Fname','$Lname','$gender','$email','$password','$address')";
+            $sql_insert1   = "INSERT INTO users(userID,FirstName,LastName,Gender,Email,Password,Address) VALUES ('$id','$Fname','$Lname','$gender','$email','$password','$address')";
             $sql_insert2   = "INSERT INTO driver(userID,LicenseNo) VALUES ('$id','$license')";
             $sql_insert3   = "INSERT INTO usercontact(userID,contact) VALUES ('$id','$telephone')";
 

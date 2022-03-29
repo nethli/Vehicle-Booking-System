@@ -1,24 +1,7 @@
 <?php
     include '../PHP/server.php';
-    include 'customersqlinsert.php';
-
-    //Creation of tables 
-    /*$sql_create1 = "CREATE TABLE customer(
-                         BloodGroup VARCHAR(255),
-                         userID INT,
-                         FOREIGN KEY (userID) REFERENCES users(userID)
-                      )";
-
-    $result = mysqli_query($con, $sql_create1);
-
-    if(!$result){
-        echo "Not Created";
-    }else{
-        echo "Created";
-    }*/
 ?>
-
-<!--Customer Form Creation-->
+   
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +57,7 @@
                 <label>Blood Group</label>
                 <br>
                 <select name = "bloodgroup">
-                    <option value = "Not Chosen">Choose Yours</option>
+                    <option value = "-1">Choose Yours</option>
                     <option value = "A+">A+</option>
                     <option value = "A-">A-</option>
                     <option value = "B+">B+</option>
@@ -91,20 +74,46 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
 
                 <input type= "radio" name = "gender" id= "male" value="Male"> Male
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;
 
                 <input type = "radio" name= "gender" id = "female" value="Female"> Female
                 <br><br>
                 
                 <center>
-                <input type = "submit" value= "Submit" name = "submit" id = "submit">
-
-                <input type = "reset" value= "Reset" name = "reset" id = "reset">
+                <input type = "submit" value= "UPDATE" name = "submit" id = "submit">
                 </center>
 
             </form>
         </div>
- 
-
 </body>
 </html>
+
+<?php
+    if(isset($_POST['submit'])){
+        $Fname      = $_POST('firstName');
+        $Lname      = $_POST('lastName');
+        $gender     = $_POST('gender');
+        $email      = $_POST['email'];
+        $password   = $_POST['Password'];
+        $address    = $_POST['address'];
+        $telephone  = $_POST['telephone'];
+        $BloodGroup = $_POST['bloodgroup'];
+
+        if(isset($_GET['updateid'])){
+            $id = $_GET['updateid'];
+
+            $sql_update  = "UPDATE customer SET BloodGroup = '$BloodGroup', userID = '$id'";
+            $sql_update  = "UPDATE usercontact SET contact = '$telephone', userID = '$id'";
+            $sql_update  = "UPDATE users SET firstName = '$Fname' , lastName = '$Lname', gender = '$gender', email = '$email', Password = '$password', address = '$address' , userID= '$id'";
+
+            $result = mysqli_query($con,$sql_update);
+
+            if($result){
+                echo "Updated";
+            }else{
+                echo "Not Updated";
+            }
+        }
+    }
+
+?>

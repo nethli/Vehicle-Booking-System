@@ -29,7 +29,9 @@
 <!--Navigation Bar-->
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
-          <h5 class="text-white h4">Welcome <?php echo ucfirst($_SESSION['FirstName']) ."!!";?></h5>
+         
+        <!--Diplaying username using a session and capitalize the first name of the user using ucfirst() function-->
+          <h5 class="text-white h4">Welcome <?php echo ucfirst($_SESSION['FirstName'])."!!";?></h5>
           <span class="text-muted">For a safe ride ...</span>
         </div>
     </div>
@@ -47,24 +49,14 @@
 
 <!--Navigation Drawer-->
     <ul>
-            <li><a href = "">Home</a></li>
+            <li><a href = "homepage.php">Home</a></li>
             <li><a href = "DriverAccount.php">Create a Driver Account</a></li>
             <li><a href = "customerAccount.php">Create a Customer Account</a></li>
-            <li><a href = "loginForm.php">Sign up</a></li>
-            <li><a href = "loginForm.php">Home</a></li>
-            <li><a href = "loginForm.php">About</a></li>
-            <li><a href = "loginForm.php">News</a></li>
-            <li><a href = "loginForm.php">Sign up</a></li> 
-            <li><a href = "loginForm.php">Home</a></li>
-            <li><a href = "loginForm.php">About</a></li>
-            <li><a href = "loginForm.php">News</a></li>
-            <li><a href = "loginForm.php">Home</a></li>
-            <li><a href = "loginForm.php">About</a></li>
-            <li><a href = "loginForm.php">News</a></li>
-            <li><a href = "loginForm.php">Home</a></li>
-            <li><a href = "loginForm.php">Logout</a></li>
-            <li><a href = "loginForm.php">News</a></li>
-            <li><a href = "loginForm.php">Sign up</a></li>        
+            <li><a href = "vehicleAccount.php">Create a Vehicle Account</a></li>
+            <li><a href = "DriverDetailsTable.php">Driver Details</a></li>
+            <li><a href = "CustomerDetailsTable.php">Customer Details</a></li>
+            <li><a href = "vehicleAccount.php">Register your vehicle</a></li>
+            <li><a href = "tripForm.php">Place a booking</a></li>      
     </ul> 
        
 <!--Define Footer-->

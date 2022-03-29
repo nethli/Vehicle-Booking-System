@@ -1,40 +1,7 @@
 <?php
+    include '../PHP/server.php';
 
-include "../PHP/server.php" ;
-include "driversqlinsert.php";
-
-/*$sql_create = "CREATE TABLE users(
-                    userID INT AUTO_INCREMENT PRIMARY KEY,
-                    FirstName VARCHAR(255),
-                    LastName VARCHAR(255),
-                    Gender VARCHAR (10) check (Gender in ('Female','Male')),
-                    Email VARCHAR(255),
-                    Password VARCHAR(16),
-                    Address VARCHAR(255)
-                )";
-
-$sql_create = "CREATE TABLE driver(
-                    LicenseNo VARCHAR(255),
-                    userID VARCHAR(25) PRIMARY KEY,
-                    FOREIGN KEY (userID) REFERENCES users(userID)            
-                )";
-
-$sql_create =   "CREATE TABLE usercontact(
-                    contact INT,
-                    userID VARCHAR(255),
-                    FOREIGN KEY (userID) REFERENCES users(userID) 
-                    PRIMARY KEY(userID,contact)
-                )";
-
-$result = mysqli_query($con,$sql_create);
-
-if($result){
-   echo "Table Created";
-}
-else{
-   echo "Not created";
-}*/
-            
+    //header('location:driverAccount.php');
 ?>
 
 <!DOCTYPE html>
@@ -99,21 +66,45 @@ else{
                 <input type= "radio" name = "gender" id= "male" value="Male"> Male
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <input type = "radio" name= "gender" id = "female" value="Female"> Female
-                <br><br>                                                                                                                                                                                           <label>Vehicle Type</label>
-                
-                <center>
-                <input type = "submit" value= "Register" name = "submit" id = "submit">
 
-                <input type = "reset" value= "Reset" name = "reset" id = "reset">
+                <br><br>
+                <center>
+                <input type = "submit" value= "UPDATE" name = "submit" id = "submit">
                 </center>
 
             </form>
         </div>
     </div>
 
-    <div class = "black">
-        
-    </div>
-
 </body>
 </html>
+
+<?php
+        if(isset($_POST['submit'])){
+            $Fname     = $_POST['firstName'];
+            $Lname     = $_POST['lastName'];
+            $gender    = $_POST['gender'];
+            $email     = $_POST['email'];
+            $password  = $_POST['Password'];
+            $address   = $_POST['address'];
+            $telephone = $_POST['telephone'];
+            $license   = $_POST['license'];
+
+            if(isset($_GET['updateid'])){
+                $id = $_GET['updateid'];
+
+            $sql_update   = "UPDATE driver SET userID= '$id', license = '$license'";
+            $sql_update   = "UPDATE usercontact SET userID= '$id', telephone ='$telephone'";
+            $sql_update   = "UPDATE users SET firstName = '$Fname' , lastName = '$Lname', gender = '$gender', email = '$email', Password = '$password', address = '$address' , userID= '$id'";
+            
+            $result = mysqli_query($con,$sql_update);
+
+            if($result){
+                echo "Updated";
+            }else{
+                echo "Not Updated";
+            }
+        } 
+    }
+
+?>

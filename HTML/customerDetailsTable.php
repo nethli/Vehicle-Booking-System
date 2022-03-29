@@ -19,6 +19,7 @@
     </head>
 
 <body>
+<form method ="POST">
 <div class = "Container">
     <div class = "Content">
     <h2>Customer Details</h2>
@@ -67,9 +68,8 @@
                                 <td>'.$blood.'</td>
                                 
                                 <td>
-                                <button type="button" class="btn btn-info">View</button>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-primary"><a href= "customerupdate.php? updateid= '.$id.'" class ="text-light"><Update</a></button>
+                                <button type="button" class="btn btn-danger"> <a href= "customerdelete.php? deleteid='.$id.'"  class ="text-light">Delete</a></button>
                                 </td>
                             </tr>';
                         }
@@ -81,6 +81,6 @@
         </center>
     </div>
 </div>
-
+</form>
 </body>
 </html>

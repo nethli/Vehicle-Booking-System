@@ -64,9 +64,8 @@
                                 <td>'.$license.'</td>
                             
                                 <td>
-                                <button type="button" class="btn btn-info">View</button>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger"> <a href = "delete.php? deleteid= '.$id.'">Delete</a></button>
+                                <button type="button" class="btn btn-primary"><a href = "driverupdate.php? updateid= '.$id.'" class ="text-light">Update</a></button>
+                                <button type="button" class="btn btn-danger"><a href = "driverdelete.php? deleteid='.$id.'" class ="text-light">Delete</a></button>
                                 </td>
                             </tr>';
                         }

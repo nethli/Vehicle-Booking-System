@@ -28,7 +28,7 @@
             <form method="POST" name = "login">
             <div class = "field">
                 <span class = "fas fa-user-alt"></span>
-                <input type = "text" name = "username" placeholder = "username" required id = "myname">
+                <input type = "text" name = "username" placeholder = "username" required id = "myname">">
             </div>
 
             <div class = "field space">
@@ -41,7 +41,7 @@
                 
             </div>
     
-        <div class ="acc"> Don't have account? <a href = "homepage.html">Signup Now</a></div>
+        <div class ="acc"> Don't have account? <a href = "homepage.php" >Signup Now</a></div>
         </div>
     </div>  
 

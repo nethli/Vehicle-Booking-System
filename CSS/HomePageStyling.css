@@ -1,56 +1,20 @@
 *{
     margin : 0;
     padding: 0;
-    box-sizing: border box;
-
 }
 
-.Container{
-    background-image: url(../SRC/carbg.jpg);
+body{
+    background : url(../SRC/carbg.jpg);
+    /*background-size: 280%;*/
     background-position: center;
-    background-size:cover;
-    height :100vh;    
 }
 
-.Container:after{
-    position: absolute;
-    content: '';
-    top : 0;
-    left: 0;
-    height : 100%;
-    width : 100%;
-    background:rgba(0,0,0,0.7);
-
+h1,h2{
+  /*text-align: center; */
+  font-family: sans-serif;
+  padding: 20px; 
 }
 
-.Box{
-    position: absolute;
-    top : 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 999;
-    width: 900px;
-    padding:60px 32px ;
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow: -px 4px28px 0px rgba(0, 0, 0, 0.75); 
-}
-
-input[type = "submit"]{
-    background: #3498db;
-    border : 1px solid #2691d9;
-    font-size: 40px;
-    font-weight:600;
-    color: white;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-    cursor:pointer;
-    width : 500px;
-    height:250px;
-
-
-}
-
-input[type = "submit"]:hover{
-    background:  #2691d9;
+h1,h2{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
